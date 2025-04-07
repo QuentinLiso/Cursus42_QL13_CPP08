@@ -6,20 +6,20 @@
 #    By: qliso <qliso@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/07 09:22:01 by qliso             #+#    #+#              #
-#    Updated: 2025/04/07 20:31:13 by qliso            ###   ########.fr        #
+#    Updated: 2025/04/08 00:13:09 by qliso            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #VARIABLES
-NAME	=	cpp08_ex00
+NAME	=	cpp08_ex01
 
 SRCS	=	$(addsuffix .cpp, \
 			main \
+			Span \
 			)
 
-HEADERS		=	$(addsuffix pp, \
-				easyFind.h \
-				easyFind.t \
+HEADERS		=	$(addsuffix .hpp, \
+				Span \
 				)
 
 OBJS_PATH	=	.objs/
