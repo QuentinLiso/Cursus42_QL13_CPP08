@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:32:50 by qliso             #+#    #+#             */
-/*   Updated: 2025/04/08 01:35:46 by qliso            ###   ########.fr       */
+/*   Updated: 2025/04/11 15:55:22 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <cstdlib>
 # include <exception>
 # include <limits>
+# include <utility>
+# include <algorithm>
+# include <limits>
 
 class	Span
 {
@@ -28,10 +31,31 @@ class	Span
 		Span(void);
 		
 	public:
+		class SingleElementException : public std::exception
+		{
+			private :
+				std::string	_msg;
+			public :
+				SingleElementException(std::string const & msg);
+				virtual ~SingleElementException(void) throw();
+				virtual const char* what() const throw();
+		};
+		class RangeOverflowException : public std::exception
+		{
+			private :
+				std::string _msg;
+			public :
+				RangeOverflowException(std::string const & msg);
+				virtual ~RangeOverflowException(void) throw();
+				virtual const char* what() const throw();
+		};
+
+
 		Span(unsigned int n);
 		Span(Span const &c);
 		Span& operator=(Span const &rhs);
-		virtual ~Span(void);	
+		virtual ~Span(void);
+
 
 		unsigned int const& getSize(void) const;
 		std::vector<int> const& getSpan(void) const;
@@ -40,6 +64,7 @@ class	Span
 		void	addRange(int i, int j);
 		void	addRange(std::vector<int> const &v);
 		void	addRandom(unsigned int n, unsigned int range);
+		void	displayInfo(void) const;
 		int		shortestSpan(void) const;
 		int		longestSpan(void) const;
 };
