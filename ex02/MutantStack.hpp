@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 17:00:02 by qliso             #+#    #+#             */
-/*   Updated: 2025/04/12 11:35:58 by qliso            ###   ########.fr       */
+/*   Updated: 2025/05/02 12:14:42 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	MutantStack : public std::stack<T>
 {
 	public:
 		MutantStack(void);
-		MutantStack(MutantStack const &c);
+		MutantStack(MutantStack const &other);
 		MutantStack& operator=(MutantStack const &rhs);
 		virtual ~MutantStack(void);
 

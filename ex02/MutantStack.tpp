@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 17:00:02 by qliso             #+#    #+#             */
-/*   Updated: 2025/04/12 11:39:08 by qliso            ###   ########.fr       */
+/*   Updated: 2025/05/02 12:14:29 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ template < typename T >
 MutantStack<T>::MutantStack(void) {}
 
 template < typename T >
-MutantStack<T>::MutantStack(MutantStack const &c) : std::stack<T>(c) {}
+MutantStack<T>::MutantStack(MutantStack const &other) : std::stack<T>(other) {}
 
 template < typename T >
 MutantStack<T>& MutantStack<T>::operator=(MutantStack const &rhs)

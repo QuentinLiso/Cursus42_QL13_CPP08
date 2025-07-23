@@ -6,7 +6,7 @@
 /*   By: qliso <qliso@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 17:22:38 by qliso             #+#    #+#             */
-/*   Updated: 2025/04/11 16:53:52 by qliso            ###   ########.fr       */
+/*   Updated: 2025/05/02 10:47:28 by qliso            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,18 @@ int main ( void )
 	emptytest_list();
     test_deque();
     wrongtest_deque();
+
+    // Check compile error if I don't have a container of int
+    // std::list<std::string> strlst;
+    // strlst.push_back("bonjour");
+    // strlst.push_back("tout le monde");
+    // try
+    // {
+    //     int i = easyFind(strlst, 3);
+    // }
+    // catch (const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }   
     return ( 0 );
 }
